@@ -1,6 +1,6 @@
 # Transla{w}tion
 
-![Transla{w}tion – Screenshot](images/screenshot.png)
+![Transla{w}tion – Screenshot](images/translawtion_vorschau_beispiel1.webp)
 
 **Echtzeit-Übersetzung von Gebärdensprache für Behördengänge**
 
