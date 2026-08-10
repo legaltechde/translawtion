@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transla{w}tion</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{
+  --bg:#ffffff; --fg:#111111; --muted:#5a5a5a; --border:#e6e6e6;
+  --code-bg:#f6f6f5; --blockquote-bg:#fafaf8; --link:#111;
+  --max:740px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f0f0f; --fg:#ebebeb; --muted:#9a9a9a; --border:#262626; --code-bg:#171717; --blockquote-bg:#151515; --link:#f0f0f0; }
+}
+html[data-theme="light"]{ --bg:#ffffff; --fg:#111111; --muted:#5a5a5a; --border:#e6e6e6; --code-bg:#f6f6f5; --blockquote-bg:#fafaf8; --link:#111; }
+html[data-theme="dark"]{ --bg:#0f0f0f; --fg:#ebebeb; --muted:#9a9a9a; --border:#262626; --code-bg:#171717; --blockquote-bg:#151515; --link:#f0f0f0; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--fg); font-family:var(--sans); font-size:16px; line-height:1.7}
+a{color:var(--link); text-underline-offset:3px}
+.wrap{max-width:var(--max); margin:0 auto; padding:56px 24px 96px}
+h1{font-size:2.2rem; line-height:1.15; letter-spacing:-.02em; margin:0 0 16px; font-weight:700}
+h2{font-size:1.35rem; line-height:1.25; margin:48px 0 16px; letter-spacing:-.01em; padding-top:24px; border-top:1px solid var(--border)}
+h3{font-size:1.02rem; margin:32px 0 8px; font-weight:600}
+p{margin:0 0 16px}
+img{display:block; max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px; margin:16px 0 24px}
+code{font-family:var(--mono); font-size:.9em; background:var(--code-bg); padding:.15em .4em; border-radius:5px; border:1px solid var(--border)}
+pre{background:var(--code-bg); border:1px solid var(--border); border-radius:8px; padding:16px; overflow:auto; margin:16px 0 24px}
+pre code{background:none; border:0; padding:0; font-size:.875em; line-height:1.6}
+blockquote{margin:20px 0; padding:14px 18px; background:var(--blockquote-bg); border:1px solid var(--border); border-left:3px solid var(--fg); border-radius:0 8px 8px 0; font-size:.95em}
+ul,ol{margin:0 0 16px; padding-left:22px}
+li{margin:6px 0}
+hr{border:0; border-top:1px solid var(--border); margin:48px 0}
+table{width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:.9em; display:block; overflow-x:auto}
+th,td{border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top}
+th{font-weight:600; background:var(--code-bg)}
+.small{color:var(--muted); font-size:.9em}
+.kicker{color:var(--muted); font-size:.85em; margin-bottom:32px}
+.contact{margin-top:32px; padding:14px 16px; border:1px solid var(--border); border-radius:8px; background:var(--code-bg); font-family:var(--mono); font-size:.9em}
+
+/* mermaid */
+.mermaid-wrap{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--bg);
+  padding:24px 16px;
+  margin:20px 0 28px;
+  overflow:auto;
+}
+.mermaid-wrap .mermaid{
+  display:flex; justify-content:center;
+}
+.mermaid-wrap .caption{
+  text-align:center; font-size:.78em; color:var(--muted); font-family:var(--mono); margin-top:12px; letter-spacing:.04em;
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<h1>Transla{w}tion</h1>
+<p class="kicker">Echtzeit-Übersetzung von Gebärdensprache für Behördengänge</p>
+
+<img src="images/translawtion_vorschau_beispiel1.webp" alt="Transla{w}tion – Screenshot">
+
+<p><strong>Echtzeit-Übersetzung von Gebärdensprache für Behördengänge</strong></p>
+<p>Transla{w}tion ist ein Prototyp für eine Software, die Menschen mit Gebärdensprache bei Behördengängen unterstützen soll. Ziel der Idee ist es, die Kommunikation zwischen gebärdensprachlichen und lautsprachlichen Personen direkt über einen Laptop zu ermöglichen und dadurch in geeigneten Situationen die Abhängigkeit von einem zusätzlichen Dolmetscher zu reduzieren.</p>
+<p>Die App soll dabei eine Alternative zur ausschließlich textbasierten Kommunikation für Gebärdensprachler darstellen. Sie sollen nicht nur über E-Mail oder mit Unterstützung eines Dolmetschers kommunizieren können, sondern auch selbstständig und direkt ein Gespräch mit ihrem Gegenüber führen können.</p>
+
+<blockquote><p><strong>Hinweis:</strong> Transla{w}tion ist ein Hackathon-Prototyp und kein fertiges oder für den produktiven Einsatz freigegebenes Übersetzungssystem.</p></blockquote>
+
+<h2>Entstehung</h2>
+<p>Die App ist im Rahmen des <strong>Bucerius Law School Hackathon 2025</strong> im <strong>Mai 2025</strong> entstanden.</p>
+<p>Der Prototyp wurde entwickelt, um eine mögliche technische Lösung für barriereärmere Kommunikation im Kontext von Behörden zu zeigen. Dabei stand insbesondere die Idee im Vordergrund, Gebärdensprachkommunikation und normale Sprache in einem gemeinsamen Gesprächsfenster zusammenzuführen.</p>
+
+<h2>Versionen und Systemvoraussetzungen</h2>
+<p>Im Repository befinden sich zwei Windows-Varianten:</p>
+<ul>
+<li><strong>Windows mit MediaPipe:</strong> Version mit MediaPipe zur Unterstützung der Gebärdenerkennung. Diese Variante funktioniert <strong>nur mit Python 3.11</strong> (Stand: <strong>09.08.2026</strong>).</li>
+<li><strong>Windows und macOS ohne MediaPipe:</strong> Eine Variante ohne MediaPipe, die sowohl unter <strong>Windows als auch macOS</strong> verwendet werden kann.</li>
+</ul>
+<p class="small">Die MediaPipe-Version ist damit insbesondere hinsichtlich der Python-Version eingeschränkt. Die Angaben entsprechen dem Stand des Projekts vom <strong>09.08.2026</strong>.</p>
+
+<h2>Funktionsweise</h2>
+<p>Das grundlegende Konzept besteht aus zwei Kommunikationswegen:</p>
+<ul>
+<li><strong>Gebärdensprache → Text:</strong> Eine Kamera erfasst die gebärdende Person. Einzelne erkannte Gebärden werden fortlaufend als Wörter angezeigt.</li>
+<li><strong>KI-Vorschlag:</strong> Aus den fortlaufend erkannten Wörtern wird im Hintergrund ein sinnvoller deutscher Satz vorgeschlagen.</li>
+<li><strong>Bestätigung durch die gebärdende Person:</strong> Der vorgeschlagene Satz kann angenommen oder abgelehnt werden. So soll die gebärdende Person kontrollieren können, ob die Software ihre Aussage richtig verstanden und formuliert hat.</li>
+<li><strong>Normale Sprache → Gespräch:</strong> Eine lautsprachlich kommunizierende Person kann im selben Chat antworten. Dadurch soll ein gemeinsames Gespräch zwischen gebärdensprachlichen und lautsprachlichen Personen möglich werden.</li>
+<li><strong>Sprachausgabe:</strong> Übersetzte bzw. bestätigte Inhalte können zusätzlich über eine Sprachausgabe ausgegeben werden.</li>
+</ul>
+
+<p>Vereinfacht lässt sich der Ablauf so darstellen:</p>
+
+<div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart TD
+    A[Gebärde] --> B[Kamera / Erkennung]
+    B --> C[fortlaufend erkannte Wörter]
+    C --> D[KI formuliert Satzvorschlag]
+    D --> E{Person bestätigt?}
+    E -->|Ja| F[gemeinsamer Chat]
+    E -->|Nein| C
+    F <--> G[lautsprachliche Antwort]
+
+    classDef step fill:#f6f6f5,stroke:#111,stroke-width:1px,color:#111,rx:8,ry:8
+    classDef decision fill:#D9FF66,stroke:#111,stroke-width:1.5px,color:#111
+    classDef chat fill:#111,stroke:#111,color:#fff
+    class A,B,C,D step
+    class E decision
+    class F,G chat
+</pre>
+<div class="caption">Abb. 1 — Vereinfachter Ablauf Gebärde → Chat</div>
+</div>
+
+<p>Die Oberfläche ist dabei bewusst als einfache Desktop-Anwendung konzipiert. Sie soll grundsätzlich auf einem gewöhnlichen Laptop mit Kamera eingesetzt werden können.</p>
+
+<h2>Beispiel für einen Gesprächsablauf</h2>
+<p>Ein möglicher Behördengang könnte beispielsweise so aussehen:</p>
+
+<pre><code>10:15 – Person B (Sprache): Guten Tag, wie kann ich Ihnen helfen?
+
+10:15 – System (Erkannt): ich | möchte | einen | ausweis | beantragen
+
+10:15 – System (Vorschlag): Ich möchte einen Ausweis beantragen.
+
+10:15 – Person A (Gebärdensprache): ✓ Übernehmen
+
+10:15 – System: Übersetzung gesendet.
+
+10:16 – Person B (Sprache): Gerne. Benötigen Sie einen Personalausweis oder einen Reisepass?
+
+10:16 – System (Erkannt): personalausweis
+
+10:16 – System (Vorschlag): Ich möchte einen Personalausweis beantragen.
+
+10:16 – Person A (Gebärdensprache): ✓ Übernehmen
+
+10:16 – System: Übersetzung gesendet.
+
+10:17 – Person B (Sprache): Dafür benötige ich bitte Ihren bisherigen Ausweis
+und gegebenenfalls ein aktuelles biometrisches Passfoto.
+</code></pre>
+
+<p>Der entscheidende Punkt ist dabei, dass <strong>die erkannte Wortfolge nicht automatisch als endgültige Aussage versendet werden muss</strong>. Erst der Satzvorschlag der KI kann von der gebärdenden Person bestätigt oder abgelehnt werden.</p>
+
+<h2>Status des Projekts</h2>
+<p>Die App wurde als Hackathon-Prototyp entwickelt und <strong>nicht weiterentwickelt</strong>.</p>
+<p>Eine Weiterentwicklung ist <strong>aktuell ebenfalls nicht geplant</strong>. Es bestehen derzeit <strong>keine Pläne</strong>, das Projekt zu einem produktiven oder dauerhaft gepflegten System auszubauen.</p>
+<p>Der hier veröffentlichte Stand dient daher in erster Linie als Dokumentation und als Einblick in die im Hackathon entwickelte Idee und den entstandenen Prototyp.</p>
+
+<h2>Wichtige Einschränkungen</h2>
+<p>Der Prototyp ist <strong>nicht als verlässliches Übersetzungs- oder Kommunikationssystem für reale Behördengänge gedacht</strong>. Insbesondere können automatische Gebärdenspracherkennung und KI-basierte Sprachformulierung Fehler machen.</p>
+<p>Bei einer tatsächlichen Anwendung in rechtlich oder administrativ relevanten Situationen müssten unter anderem Genauigkeit, Datenschutz, Barrierefreiheit, Sicherheit, Einwilligung, Haftungsfragen und die zuverlässige Kommunikation mitgedacht und umfangreich geprüft werden.</p>
+<p>Die im Prototyp dargestellte Idee ist daher als technisches Konzept und nicht als Ersatz für professionelle Gebärdensprachdolmetschung oder andere notwendige Kommunikationshilfen zu verstehen.</p>
+
+<h2>Kontakt</h2>
+<p>Bei Interesse am Projekt, dem Prototyp oder der dahinterstehenden Idee kann Kontakt aufgenommen werden:</p>
+<div class="contact">legaltechde@mail.de</div>
+
+<hr>
+<p class="small"><em>Entstanden beim Bucerius Law School Hackathon 2025 · Mai 2025</em></p>
+<hr>
+
+<h2>Technische Beschreibung</h2>
+
+<h3>Übersicht</h3>
+<p><strong>Transla{w}tion</strong> ist eine <strong>Python-basierte Desktop-Anwendung</strong>, die <strong>Echtzeit-Gebärdensprachenerkennung</strong> mit <strong>Spracherkennung</strong> und <strong>KI-gestützter Satzgenerierung</strong> kombiniert, um die Kommunikation zwischen gebärdensprachlichen und lautsprachlichen Personen zu erleichtern. Die Anwendung nutzt <strong>MediaPipe</strong> für die Erkennung von Hand-, Gesichts- und Körperhaltungen sowie <strong>Ollama</strong> für die KI-basierte Verarbeitung der erkannten Wörter zu sinnvollen Sätzen.</p>
+
+<hr>
+
+<h3>Architektur</h3>
+<p>Die Anwendung folgt einem <strong>modularen Aufbau</strong> mit den folgenden Hauptkomponenten:</p>
+<ol>
+<li><strong>Benutzeroberfläche (GUI)</strong> – PyQt5, Kamera-Fenster, Chat-Fenster, Steuerelemente.</li>
+<li><strong>Gebärdensprachenerkennung</strong> – MediaPipe hands, face_mesh, pose, VideoThread.</li>
+<li><strong>Spracherkennung</strong> – speech_recognition + Google API, sounddevice, AudioRecorder Thread.</li>
+<li><strong>KI-Satzgenerierung</strong> – Ollama gemma3:1b, kontextsensitiv.</li>
+<li><strong>Übersetzung und Sprachausgabe</strong> – deep_translator, gTTS, externe Google-Server.</li>
+<li><strong>Druckfunktion</strong> – QPrinter, QPrintPreviewDialog A4.</li>
+</ol>
+
+<hr>
+
+<h3>Verwendete Bibliotheken und Abhängigkeiten</h3>
+<table>
+<thead><tr><th>Bibliothek</th><th>Version</th><th>Zweck</th></tr></thead>
+<tbody>
+<tr><td>PyQt5</td><td>5.x</td><td>GUI-Framework</td></tr>
+<tr><td>OpenCV (cv2)</td><td>4.x</td><td>Kameraaufnahme</td></tr>
+<tr><td>MediaPipe</td><td>0.10.x</td><td>Landmarken</td></tr>
+<tr><td>NumPy</td><td>1.x</td><td>Mathematik</td></tr>
+<tr><td>sounddevice</td><td>0.4.x</td><td>Audioaufnahme</td></tr>
+<tr><td>soundfile</td><td>0.12.x</td><td>WAV</td></tr>
+<tr><td>speech_recognition</td><td>3.10.x</td><td>Audio → Text</td></tr>
+<tr><td>deep_translator</td><td>1.11.x</td><td>Übersetzung</td></tr>
+<tr><td>gTTS</td><td>2.3.x</td><td>TTS</td></tr>
+<tr><td>Ollama</td><td>0.1.x</td><td>lokales LLM</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3>Ablauf der Gebärdensprachenerkennung</h3>
+<ol>
+<li><strong>Kameraaufnahme</strong>: cv2.VideoCapture(0) → RGB → MediaPipe.</li>
+<li><strong>Landmark-Erkennung</strong>: THUMB_TIP, INDEX_FINGER_TIP etc.</li>
+<li><strong>Gebärdenzuordnung</strong>: DE "Ich", "Tat", "nicht", "begangen", ASL "I", "did", "not", "commit", Sammlung in recognized_words.</li>
+<li><strong>KI-Satzgenerierung</strong>: Ollama Vorschlag → Bestätigung.</li>
+<li><strong>Chat-Integration</strong>: Person A + Person B.</li>
+</ol>
+
+<hr>
+
+<h3>Ablauf der Spracherkennung (Person B)</h3>
+<ol>
+<li><strong>Audioaufnahme</strong>: Taste "Q", 5s, 44.1 kHz.</li>
+<li><strong>Spracherkennung</strong>: Google API, de-DE / en-US.</li>
+<li><strong>Anzeige im Chat</strong>: Person B.</li>
+</ol>
+
+<hr>
+
+<h3>Threading-Modell</h3>
+<table>
+<thead><tr><th>Thread</th><th>Zweck</th><th>Signale</th></tr></thead>
+<tbody>
+<tr><td>VideoThread</td><td>Kamera + Gebärden</td><td>change_pixmap_signal, recording_finished_signal</td></tr>
+<tr><td>AudioRecorder</td><td>Audio + STT</td><td>recording_finished_signal, processing_started_signal</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3>Datenfluss</h3>
+
+<div class="mermaid-wrap">
+<pre class="mermaid">
+graph TD
+    A[Kamera] -->|Video-Frames| B[VideoThread]
+    B -->|Landmarken| C[Gebärden-Erkennung]
+    C -->|Erkannte Wörter| D[Ollama KI]
+    D -->|Satzvorschlag| E[Chat]
+    E -->|Bestätigung| F[Sprachausgabe / Übersetzung]
+
+    G[Mikrofon] -->|Audio| H[AudioRecorder]
+    H -->|Text| E
+    E -->|Text| I[GoogleTranslator]
+    I -->|Übersetzung| E
+    E -->|Text| J[gTTS]
+    J -->|MP3| K[QMediaPlayer]
+
+    classDef cam fill:#111,stroke:#111,color:#fff,rx:8
+    classDef proc fill:#f6f6f5,stroke:#111,color:#111,rx:8
+    classDef ai fill:#D9FF66,stroke:#111,stroke-width:1.5px,color:#111,rx:8
+    classDef chat fill:#fff,stroke:#111,color:#111,rx:8
+    class A,G cam
+    class B,C,H,I,J proc
+    class D ai
+    class E,F,K chat
+</pre>
+<div class="caption">Abb. 2 — Datenfluss Kamera/Mikrofon → Chat → Übersetzung/TTS</div>
+</div>
+
+</main>
+
+<script>
+(function(){
+  function getThemeSetting(){
+    const hash = location.hash || "";
+    const m = hash.match(/theme=(light|dark|system)/);
+    return m ? m[1] : "system";
+  }
+  function applyTheme(){
+    const theme = getThemeSetting();
+    if(theme === "system"){
+      document.documentElement.removeAttribute("data-theme");
+    }else{
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+    // mermaid theme
+    const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: isDark ? "dark" : "base",
+      themeVariables: {
+        background: isDark ? "#0f0f0f" : "#ffffff",
+        primaryColor: isDark ? "#171717" : "#f6f6f5",
+        primaryBorderColor: "#111",
+        lineColor: isDark ? "#666" : "#111",
+        tertiaryColor: "#D9FF66",
+        fontFamily: "ui-monospace, monospace",
+        fontSize: "14px"
+      },
+      flowchart: { htmlLabels: true, curve: "basis" }
+    });
+  }
+  applyTheme();
+  window.addEventListener("hashchange", () => {
+    applyTheme();
+    // re-render mermaid on theme change
+    location.reload();
+  });
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  mq.addEventListener?.("change", ()=>{
+    if(getThemeSetting() === "system") location.reload();
+  });
+})();
+</script>
+</body>
+</html>
